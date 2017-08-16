@@ -1,8 +1,14 @@
+photos.tar
 *.pyc
 tags
+photos
+facades
+.c9
 test
 models
 terraform.tfstate
 terraform.tfstate.backup
 terraform.tfvars
 .idea
+exported
+training_results

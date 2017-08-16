@@ -100,8 +100,8 @@ def load(path):
         
     _, ext = os.path.splitext(path.lower())
 
-    if ext == ".jpg":
-        image = decode_jpeg(contents=contents)
+    if ext == ".jpeg":
+        image = decode_png(contents=contents)
     elif ext == ".png":
         image = decode_png(contents=contents)
     else:
@@ -114,7 +114,7 @@ def find(d):
     result = []
     for filename in os.listdir(d):
         _, ext = os.path.splitext(filename.lower())
-        if ext == ".jpg" or ext == ".png":
+        if ext == ".jpeg" or ext == ".png":
             result.append(os.path.join(d, filename))
     result.sort()
     return result
@@ -123,8 +123,8 @@ def find(d):
 def save(image, path, replace=False):
     _, ext = os.path.splitext(path.lower())
     image = to_uint8(image=image)
-    if ext == ".jpg":
-        encoded = encode_jpeg(image=image)
+    if ext == ".jpeg":
+        encoded = encode_png(image=image)
     elif ext == ".png":
         encoded = encode_png(image=image)
     else:

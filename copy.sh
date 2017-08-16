@@ -1,0 +1,1 @@
+cp -rf ../pix-pix-data-generator/photos/ .
